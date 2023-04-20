@@ -52,7 +52,7 @@ namespace todoapp_api.Controllers
             return CreatedAtAction(nameof(GetTodo), new { id = todo.id}, todo);
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTask(int id, Todo todo)
         {
             if(id != todo.id)
